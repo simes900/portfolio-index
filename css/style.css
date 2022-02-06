@@ -77,12 +77,18 @@ strong { font-weight: var(--fw-bold) }
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
-    transition: transfrom 200ms ease-in-out;
-    border-radius: 5px;
+    
+
+    /* slide animation */
+    transition: ease-out 0.8s;
+    box-shadow: inset 0 0 0 0 darkblue;
 }
 
+
 .btn:hover {
-    transform: scale(1.1);
+    color: var(--clr-light);
+    transform: scale(1.3);
+    box-shadow: inset 200px 0 0 0 darkblue;
 }
 .btn:focus {
     outline: 3px solid var(--clr-accent);
@@ -116,6 +122,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle {
+    
     margin: 0;
     font-size: var(--fs-h3);
 }
@@ -249,16 +256,33 @@ header {
 
 .intro {
     position: relative;
+    
 }
 
 .section__subtitle--intro {
     display: inline-block;
     color: var(--clr-light);
+    animation-duration: 3s;
+    animation-name: slidein;
+    
 }
 
 
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
 @media (min-width: 600px) {
     .intro {
+    
         display: grid;
         width: min-content;
         margin: 0 auto;
@@ -319,7 +343,12 @@ header {
 }
 .my-services > .btn{
     margin-top: 1em;
+    
+
+   
 }
+
+
 
 .service {
     max-width: 500px;
@@ -506,8 +535,10 @@ header {
     }
 
     .item_sub{
-       width: 600px;
+       
        text-align: center;
+       padding: 10px;
+       
     }
     .intro-page-description{
         width: 600px;
@@ -528,6 +559,15 @@ header {
     text-decoration: none;
     font-weight: 700;
     text-align: center;
-    border-radius: 5px;
+    
+
+     /* slide animation */
+     transition: ease-out 0.8s;
+     box-shadow: inset 0 0 0 0 darkblue;
+}
+
+.project-btn:hover{
+    box-shadow: inset 200px 0 0 0 darkblue;
+
 }
 
